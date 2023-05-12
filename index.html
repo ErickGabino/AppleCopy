@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Bootstrap Practica</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand"><i class="bi bi-apple"></i></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu_contenido"
+                    aria-controls="menu_contenido"
+                    aria-expanded="false"
+                    aria-label="Mostrar/Ocultar Navegación"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu_contenido">
+                    <ul class="navbar-nav me-auto fs-6">
+                        <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                        <!-- Dropdown  -->
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="subMenuProductos" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                            <!-- sub elementos -->
+                            <ul class="dropdown-menu" aria-labelledby="subMenuProductos">
+                                <li><a href="#" class="dropdown-item">Computadoras</a></li>
+                                <li><a href="#" class="dropdown-item">Laptops</a></li>
+                                <li><a href="#" class="dropdown-item">Celulares</a></li>
+                                <li><a href="#" class="dropdown-item">Audifonos</a></li>
+                                <li><a href="#" class="dropdown-item">Acesorios</a></li>
+                                <li><a href="#" class="dropdown-item">Drones</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a href="#" class="nav-link">Contactos</a></li>
+
+                        <li class="nav-item"><a href="#" class="nav-link">Soporte</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-bag"></i></a></li>
+                    </ul>
+
+                    <!-- Formulario de busqueda -->
+                    <form action="" class="d-flex">
+                        <input 
+                            type="search"
+                            class="form-control me-2 fs-6 bg-dark text-white" 
+                            aria-label="buscar"
+                            placeholder="Buscar"
+                        >
+                        <button class="btn btn-dark bg-dark"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row mb-5">
+            <div class="col">
+                <div class="col-12 text-center position-absolute z-3 mt-5">
+                    <h1 class="text-center fw-bolder">Apple Store</h1>
+                    <h2 class="text-center">Nuevos iPhone 14</h2>
+                </div>
+                <img src="img/iphone cover.jpg" alt="" class="w-100 position-relative">
+            </div>
+        </div>
+
+        <!-- carousel  -->
+        <div class="row">
+            <div class="col-12">
+                <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/apple.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/Apple-Watch-iPad-AirPods.jpg" alt="" class="w-100 h-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/apple2.jpg" alt="" class="w-100 h-100">
+                        </div>
+                    </div>
+                    <!-- controles -->
+                    <button 
+                        class="carousel-control-prev" 
+                        type="button"
+                        data-bs-target="#slideshow"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+
+                    <button 
+                    class="carousel-control-next" 
+                    type="button"
+                    data-bs-target="#slideshow"
+                    data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+
+                    <!-- indicadores -->
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#slideshow"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide to 1"
+                        >
+                        </button>
+
+                        <button
+                            type="button"
+                            data-bs-target="#slideshow"
+                            data-bs-slide-to="1"
+                            aria-current="true"
+                            aria-label="Slide to 2"
+                        >
+                        </button>
+
+                        <button
+                            type="button"
+                            data-bs-target="#slideshow"
+                            data-bs-slide-to="2"
+                            aria-current="true"
+                            aria-label="Slide to 3"
+                        >
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-5">
+            <div class="col-12">
+                <div class="border-bottom mb-3">
+                    <h1 class="text-center">Galeria</h1>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/1.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">iPhone 14</h3>
+                        <p class="card-text text-wrap col-12">El iPhone en su máxima expresión.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/2.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">iPhone 14 Pro Max</h3>
+                        <p class="card-text text-wrap col-12">Repleto de posibilidades.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/3.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">iPhone 13</h3>
+                        <p class="card-text text-wrap col-12">Increíble como siempre.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/4.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">iPhone 13 Pro Max</h3>
+                        <p class="card-text text-wrap col-12">Poder en serio. Vale la pena en serio.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/5.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">Mac</h3>
+                        <p class="card-text text-wrap col-12">Un superrendimiento en un diseño superportátil.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/6.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">Tablet</h3>
+                        <p class="card-text text-wrap col-12">Renovado para llenar tus días de color y posibilidades.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/7.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">SmartWatch</h3>
+                        <p class="card-text text-wrap col-12">Una gran experiencia que cabe en la palma de tu mano.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card border-0">
+                    <img src="img/8.jpg" alt="" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title text-center my-3">AirPods</h3>
+                        <p class="card-text text-wrap col-12">Todo lo que necesitas, por menos de lo que crees.</p>
+                        <div class="col-12 d-flex justify-content-between">
+                            <a href="#" class="btn btn-sm btn-primary col-5 py-2 rounded-pill">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary col-5 py-2 rounded-pill">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <div class="row border-top py-5 justify-content-between">
+            <div class="col-auto d-flex">
+                <a href="#" class="navbar-brand"><i class="bi bi-apple"></i></a>
+                <h3 class="lead ms-3">Apple</h3>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="btn btn-light">Subir Inicio</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <p class="text-black fst-italic">Copyright © 2023 Apple Inc. Todos los derechos reservados.</p>
+                <p class="text-black fst-italic">Mexico</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
